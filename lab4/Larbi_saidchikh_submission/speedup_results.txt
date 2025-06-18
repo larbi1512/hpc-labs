@@ -1,0 +1,93 @@
+Exercise 1: Vector Addition Revisited
+ ./vec_add 24
+Array size: 16777216 elements (64 MB)
+CPU time: 50.623 ms
+GPU time: 0.432 ms
+Speedup: 117.17x
+Results verified successfully!
+
+
+Exercise 2: Element-wise activation function
+ ./relu 100000000
+GPU: NVIDIA GeForce RTX 4070
+Running CPU implementation with 100000000 elements...
+CPU time: 7.547174 seconds
+Running GPU implementation...
+Launch config: 276 blocks, 256 threads/block, 8 elements/thread
+GPU time (including memory transfers): 0.067064 seconds
+GPU event time: 0.066932 seconds
+Overall Speedup (CPU time / GPU time): 112.54x
+ReLU activation completed successfully! All sampled values match.
+
+
+Exercise 3: Matrix-vector Multiplication
+./matvec 4096 1024
+
+Matrix-vector multiplication (4096 x 1024)
+GPU time: 0.110 ms (avg over 100 runs)
+CPU time: 42.607 ms
+Speedup: 388.86x
+GPU throughput: 76.56 GFLOP/s
+Mismatch at 89: CPU=-0.67778742, GPU=-0.67778862 (abs=1.19e-06, rel=1.76e-06)
+Mismatch at 337: CPU=-0.78474557, GPU=-0.78474671 (abs=1.13e-06, rel=1.44e-06)
+Mismatch at 459: CPU=-0.47387484, GPU=-0.47387639 (abs=1.55e-06, rel=3.27e-06)
+Mismatch at 990: CPU=-0.83730608, GPU=-0.83730727 (abs=1.19e-06, rel=1.42e-06)
+Mismatch at 1711: CPU=0.25615790, GPU=0.25615904 (abs=1.13e-06, rel=4.42e-06)
+Found 6 significant errors (max abs=1.55e-06, max rel=1.13e-05)
+
+
+Exercise 4: Vector Dot Product using Shared Memory
+./dot_product 10000000
+GPU Result: 333342681417502869684224.000000
+CPU Result: 242876245600329332162560.000000
+GPU Time: 2.904800 ms
+CPU Time: 295.524078 ms
+Speedup: 101.736465 x
+
+
+Exercise 5: 1D Stencil Computation:
+./stencil 1000000
+GPU Time: 0.155232 ms
+CPU Time: 22.012259 ms
+Speedup: 141.802322 x
+
+
+Exercise 6: batched euclidian distance
+ ./euc_dist 10000000 64
+Using GPU: NVIDIA GeForce RTX 4070 with 46 SMs
+Problem size: 10000000 vectors of dimension 64
+Memory per batch: 2441.41 MB
+Launching kernel with 1472 blocks, 256 threads/block, 4 vectors/thread
+GPU time: 426.6654 ms
+Running CPU implementation for first 100000 vectors only...
+CPU time for 100000 vectors: 23.8850 ms
+Extrapolated CPU time for all 10000000 vectors: 2388.5000 ms
+Speedup: 5.60x
+Verifying results...
+Results match within tolerance!
+
+
+Exo7: Parallel Partial Argmax:
+./argmax 100000000
+GPU Max Index: 0
+CPU Max Index: 0
+GPU Time: 1.533120 ms
+CPU Time: 253.727890 ms
+Speedup: 165.497726 x
+Results match
+
+Exo 8: Matrix addition:
+ ./matrix_add 4096 4096
+
+Matrix Addition (4096 x 4096)
+Block size: 16 x 16 (256 threads)
+Grid size: 256 x 256
+CPU time: 71.936 ms
+GPU time: 0.433 ms
+Speedup: 166.16x
+Throughput: 465.03 GB/s
+Results verified successfully!
+
+
+
+

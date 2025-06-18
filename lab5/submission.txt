@@ -1,0 +1,56 @@
+./naive_parallel_scan 1024
+CPU time: 0.00 ms
+GPU time: 0.17 ms
+Speedup: 0.03x
+Verification failed at index 256: GPU = 1.000000, CPU = 257.000000
+
+
+ ./optimized_parallel_scan
+
+Testing array size: 1024
+Optimized kernel verification failed at index 0: GPU = 0.000000, CPU = 1.000000
+CPU time: 0.00 ms
+Naive GPU time: 16.74 ms
+Optimized GPU time: 0.02 ms
+Speedup (Optimized vs Naive): 779.62x
+Speedup (Optimized vs CPU): 0.23x
+
+Testing array size: 4096
+Optimized kernel verification failed at index 0: GPU = 0.000000, CPU = 1.000000
+CPU time: 0.01 ms
+Naive GPU time: 0.01 ms
+Optimized GPU time: 0.01 ms
+Speedup (Optimized vs Naive): 1.19x
+Speedup (Optimized vs CPU): 1.59x
+
+Testing array size: 16384
+Optimized kernel verification failed at index 0: GPU = 0.000000, CPU = 1.000000
+CPU time: 0.05 ms
+Naive GPU time: 0.01 ms
+Optimized GPU time: 0.01 ms
+Speedup (Optimized vs Naive): 1.08x
+Speedup (Optimized vs CPU): 5.81x
+
+Testing array size: 65536
+Optimized kernel verification failed at index 0: GPU = 0.000000, CPU = 1.000000
+CPU time: 0.23 ms
+Naive GPU time: 0.01 ms
+Optimized GPU time: 0.01 ms
+Speedup (Optimized vs Naive): 1.33x
+Speedup (Optimized vs CPU): 21.68x
+
+Testing array size: 262144
+Optimized kernel verification failed at index 0: GPU = 0.000000, CPU = 1.000000
+CPU time: 1.04 ms
+Naive GPU time: 0.02 ms
+Optimized GPU time: 0.02 ms
+Speedup (Optimized vs Naive): 1.21x
+Speedup (Optimized vs CPU): 67.08x
+
+Testing array size: 1048576
+Optimized kernel verification failed at index 0: GPU = 0.000000, CPU = 1.000000
+CPU time: 4.88 ms
+Naive GPU time: 0.04 ms
+Optimized GPU time: 0.04 ms
+Speedup (Optimized vs Naive): 1.11x
+Speedup (Optimized vs CPU): 130.87x
